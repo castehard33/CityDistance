@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace CityRouteOptimization
 {
@@ -13,7 +12,6 @@ namespace CityRouteOptimization
             Console.WriteLine("City Route Optimization Program");
             Console.WriteLine("===============================");
 
-            // Load cities and distances
             CityManager cityManager = new CityManager();
             cityManager.LoadFromFile("miasta.txt");
 
@@ -21,10 +19,9 @@ namespace CityRouteOptimization
             while (running)
             {
                 Console.WriteLine("\nOptions:");
-                Console.WriteLine("1. Display cities and distances");
-                Console.WriteLine("2. Find route using Nearest Neighbor");
-                Console.WriteLine("3. Find route using Genetic Algorithm with HGreX");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("1. Find route using Nearest Neighbor");
+                Console.WriteLine("2. Find route using Genetic Algorithm with HGreX");
+                Console.WriteLine("3. Exit");
                 Console.Write("\nSelect option: ");
 
                 string input = Console.ReadLine();
@@ -33,15 +30,12 @@ namespace CityRouteOptimization
                 switch (input)
                 {
                     case "1":
-                        cityManager.DisplayCitiesAndDistances();
-                        break;
-                    case "2":
                         RunNearestNeighbor(cityManager);
                         break;
-                    case "3":
+                    case "2":
                         RunGeneticAlgorithm(cityManager);
                         break;
-                    case "4":
+                    case "3":
                         running = false;
                         break;
                     default:
@@ -141,42 +135,6 @@ namespace CityRouteOptimization
             catch (Exception ex)
             {
                 Console.WriteLine($"Error loading file: {ex.Message}");
-            }
-        }
-
-        public void DisplayCitiesAndDistances()
-        {
-            if (cities.Count == 0)
-            {
-                Console.WriteLine("No cities loaded.");
-                return;
-            }
-
-            Console.WriteLine("Cities:");
-            for (int i = 0; i < cities.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}. {cities[i]}");
-            }
-
-            Console.WriteLine("\nDistance Matrix:");
-
-            // Header row with city names
-            Console.Write("          ");
-            foreach (var city in cities)
-            {
-                Console.Write($"{city.PadRight(10)} ");
-            }
-            Console.WriteLine();
-
-            // Distances
-            for (int i = 0; i < cities.Count; i++)
-            {
-                Console.Write($"{cities[i].PadRight(10)} ");
-                for (int j = 0; j < cities.Count; j++)
-                {
-                    Console.Write($"{distances[i, j].ToString().PadRight(10)} ");
-                }
-                Console.WriteLine();
             }
         }
 
