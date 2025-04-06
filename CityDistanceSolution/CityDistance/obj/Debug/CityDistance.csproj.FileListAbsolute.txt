@@ -1,0 +1,7 @@
+C:\Users\bmedr\Desktop\REPOs\CityDistance\CityDistanceSolution\CityDistance\bin\Debug\CityDistance.exe.config
+C:\Users\bmedr\Desktop\REPOs\CityDistance\CityDistanceSolution\CityDistance\bin\Debug\CityDistance.exe
+C:\Users\bmedr\Desktop\REPOs\CityDistance\CityDistanceSolution\CityDistance\bin\Debug\CityDistance.pdb
+C:\Users\bmedr\Desktop\REPOs\CityDistance\CityDistanceSolution\CityDistance\obj\Debug\CityDistance.csproj.AssemblyReference.cache
+C:\Users\bmedr\Desktop\REPOs\CityDistance\CityDistanceSolution\CityDistance\obj\Debug\CityDistance.csproj.CoreCompileInputs.cache
+C:\Users\bmedr\Desktop\REPOs\CityDistance\CityDistanceSolution\CityDistance\obj\Debug\CityDistance.exe
+C:\Users\bmedr\Desktop\REPOs\CityDistance\CityDistanceSolution\CityDistance\obj\Debug\CityDistance.pdb
